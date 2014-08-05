@@ -1,0 +1,37 @@
+
+# maven projects
+target
+
+# gradle projects
+/build/
+.gradle/2.0/taskArtifacts/cache.properties.lock
+.gradle/2.0/taskArtifacts/fileHashes.bin
+.gradle/2.0/taskArtifacts/cache.properties
+.gradle/2.0/taskArtifacts/cache.properties.lock
+.gradle/2.0/taskArtifacts/fileHashes.bin
+.gradle/2.0/taskArtifacts/fileSnapshots.bin
+.gradle/2.0/taskArtifacts/outputFileStates.bin
+.gradle/2.0/taskArtifacts/taskArtifacts.bin
+gradle-app.setting
+.nb-gradle-properties
+.nb-gradle/private/cache/*
+.nb-gradle/profiles/private/aux-config
+.gradle/2.0/taskArtifacts/cache.properties.lock
+.gradle/2.0/taskArtifacts/fileHashes.bin
+
+# netbeans
+nbactions.xml
+nb-configuration.xml
+
+# eclipse
+.classpath
+.project
+.settings/
+
+# intelliJ
+.idea
+*.iml
+
+# logging files
+*.log
+src/main/resources/fireblade-server.log.*
