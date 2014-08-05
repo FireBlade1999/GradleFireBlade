@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:util="http://www.springframework.org/schema/util" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://springframework.org/schema/beans/spring-beans-3.2.xsd 
+        http://www.springframework.org/schema/util http://wwww.springframework.org/schema/util/spring-util-3.2.xsd 
+        http://www.springframework.org/schema/context http://www.springframework.org/shema/context/spring-context-3.2.xsd" 
+       default-autowire="byName">
+
+    <bean id="configuration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true" />
+	<property name="locations">
+	    <list>
+	        <value>classpath:default.properties</value>
+		<!-- allow override of properties with an external properties file -->
+		<value>file:#{systemProperties['override.properties']}</value>
+	    </list>
+	</property>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="properties" ref="configuration" />
+    </bean>
+    
+    <bean id="P3PFilter" class="org.fireblade.pixel.server.P3PFilter" />
+    
+    <bean id="newUserFilter" class="org.fireblade.pixel.server.NewUserFilter">
+        <constructor-arg index="0" ref="userGen" />
+    </bean>
+    
+    <bean id="userGen" class="org.fireblade.pixel.server.NewUserGenerator" />
+    
+    <bean id="hasUserFilter" class="org.fireblade.pixel.server.HasUserFilter" />
+
+</beans>    
