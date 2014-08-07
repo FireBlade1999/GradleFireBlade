@@ -18,6 +18,7 @@ gradle-app.setting
 .nb-gradle/profiles/private/aux-config
 .gradle/2.0/taskArtifacts/cache.properties.lock
 .gradle/2.0/taskArtifacts/fileHashes.bin
+*private/cache*
 
 # netbeans
 nbactions.xml
