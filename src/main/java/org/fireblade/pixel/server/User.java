@@ -92,7 +92,7 @@ public class User {
         int expiryTimeInSeconds = Seconds.secondsBetween(currentTime, expiryTime).getSeconds();
         
         Cookie newCookie = new Cookie("FB_ID", URLEncoder.encode(cookieValue, "UTF-8"));
-        newCookie.setPath("/fireblade-server");
+        newCookie.setPath("/GradleFireBlade");
 
         System.out.println("User: drop cookie.");
         response.addCookie(newCookie);

@@ -70,9 +70,9 @@ public class NewUserFilter implements Filter {
         
         // new user
         if (user == null) {
-            System.out.println("newuserfileter: redirect.");
+            System.out.println("newuserfilter: redirect.");
             userGen.generate().writeTo(httpServletResponse);
-            httpServletResponse.addHeader("Location", "/fireblade-server/cc");
+            httpServletResponse.addHeader("Location", "/GradleFireBlade/cc");
             httpServletResponse.setStatus(HttpServletResponse.SC_MOVED_TEMPORARILY);
             
             // stop the request going down the chain when doing a redirect

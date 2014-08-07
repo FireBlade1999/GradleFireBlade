@@ -6,6 +6,8 @@
 	// java makes this a java project
 	apply plugin: 'java'
 	apply plugin: 'groovy'
+        apply plugin: 'war'
+        apply plugin: 'jetty'
 
 	// repos
 	repositories {

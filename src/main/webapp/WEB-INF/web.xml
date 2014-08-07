@@ -64,7 +64,7 @@
     <!-- all requests at the root with be handled by the fireblade servlet -->
     <servlet-mapping>
         <servlet-name>fireblade</servlet-name>
-	<url-pattern>/</url-pattern>
+	<url-pattern>/GradleFireBlade</url-pattern>
     </servlet-mapping>
 
     <!-- define what to show when no filename is provided in the url -->
